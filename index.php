@@ -135,7 +135,7 @@ setup_postdata( $post );
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 					'post_type'=>'project',
-					'posts_per_page' => 10,
+					'posts_per_page' => 1,
 					'paged' => $paged,
 				));
 					if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
@@ -168,7 +168,7 @@ setup_postdata( $post );
 						</div><!-- photo -->
 
 						<div class="link"><a href="<?php the_permalink(); ?>"></a></div>
-						
+
 					</article>
 
 				<?php 
