@@ -3,6 +3,12 @@
 	display: block;
 	float: left;
 	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+		float: right;
+		clear: none;
+		margin: 70px 0 0 0;
+	}
 
 	ul {
 		display: none;
@@ -51,14 +57,28 @@
 	li {
 		float: left;
 		position: relative;
+		font: {
+			family: $font__main;
+			size: 16px;
+		}
+		text-transform: uppercase;
+		@media screen and (min-width: $tabwidth) {
+
+		}
 
 		&:hover > a,
 		&.focus > a {
+			color: $color-red;
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
+		color: #000;
+		@include transition(all .3s ease);
+		@media screen and (min-width: $tabwidth) {
+			padding: 10px 15px;
+		}
 	}
 
 	.current_page_item > a,

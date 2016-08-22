@@ -1,4 +1,60 @@
-$font__main: sans-serif;
+// @font-face {
+//     font-family: Vinci-Sans-Black;
+//     src: url(fonts/Vinci-Sans-Black.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Sans-Bold;
+//     src: url(fonts/Vinci-Sans-Bold.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Sans-Extra-Light;
+//     src: url(fonts/Vinci-Sans-Extra-Light.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Sans-Light;
+//     src: url(fonts/Vinci-Sans-Light.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Sans-Medium;
+//     src: url(fonts/Vinci-Sans-Medium.ttf);
+// }
+@font-face {
+    font-family: Vinci-Sans-Regular;
+    src: url(fonts/Vinci-Sans-Regular.ttf);
+}
+// @font-face {
+//     font-family: Vinci-Serif-Black;
+//     src: url(fonts/Vinci-Serif-Black.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Serif-Bold-Italic;
+//     src: url(fonts/Vinci-Serif-Bold-Italic.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Serif-Bold;
+//     src: url(fonts/Vinci-Serif-Bold.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Serif-Extra-Light;
+//     src: url(fonts/Vinci-Serif-Extra-Light.ttf);
+// }
+// @font-face {
+//     font-family: Vinci-Serif-Italic;
+//     src: url(fonts/Vinci-Serif-Italic.ttf);
+// }
+@font-face {
+    font-family: Vinci-Serif-Light;
+    src: url(fonts/Vinci-Serif-Light.ttf);
+}
+@font-face {
+    font-family: Vinci-Serif-Regular;
+    src: url(fonts/Vinci-Serif-Regular.ttf);
+}
+
+$font__main: Vinci-Sans-Regular;
+$font__headline: Vinci-Serif-Regular;
+$font__headline-light: Vinci-Serif-Light;
+
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

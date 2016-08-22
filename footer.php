@@ -9,6 +9,13 @@
  * @package ACStarter
  */
 
+
+$address = get_field('address', 'option');
+$direct_phone = get_field('direct_phone', 'option');
+$lab_phone = get_field('lab_phone', 'option');
+$linkedin_link = get_field('linkedin_link', 'option');
+$ncpp_link = get_field('ncpp_link', 'option');
+$sitemap_link = get_field('sitemap_link', 'option');
 ?>
 
 	</div><!-- #content -->
@@ -16,12 +23,24 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'acstarter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'acstarter' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'acstarter' ), 'acstarter', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+				
+			<div class="col">
+				<h3><?php bloginfo('name'); ?></h3>
+			</div><!-- col -->
+
+			<div class="col">
+				
+			</div><!-- col -->
+
+			<div class="col">
+				
+			</div><!-- col -->
+			
+
 			</div><!-- .site-info -->
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
