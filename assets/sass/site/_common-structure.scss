@@ -17,7 +17,7 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 90%;
 		padding: 0px;
 	}
 }
@@ -25,11 +25,13 @@ div {
 .content-area {
 	width: 100%;
 	margin: 0px auto;
+	padding: 20px;
 	
-	@media screen and (min-width: $tabwidth) {
-		width: 66%;
+	@media screen and (min-width: $midwidth) {
+		width: 52%;
 		float: left;
-		margin: 0;
+		margin: 0 0 0 3%;
+		padding: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
@@ -40,8 +42,8 @@ div {
 	width: 100%;
 	margin: 0px auto;
 	
-	@media screen and (min-width: $tabwidth) {
-		width: 26%;
+	@media screen and (min-width: $midwidth) {
+		width:41%;
 		float: right;
 		margin: 0;
 	}
@@ -60,16 +62,19 @@ header.site-header {
 	height: 61px;
 	background-image: url(images/logo.png);	
 	background-size: cover;
-	margin: 10px auto;
+	margin: 0px auto 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 350px;
-		height: 85px;
+		width: 280px;
+		height: 68px;
+	}
+	@media screen and (min-width: $midwidth) {
 		float: left;
 		margin: 20px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		width: 350px;
+		height: 85px;
 	}
 }
 .logo a, h1.logo a {
@@ -79,11 +84,12 @@ header.site-header {
 	text-indent: -9000px;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 350px;
-		height: 85px;
+		width: 280px;
+		height: 68px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		width: 350px;
+		height: 85px;
 	}
 }
 .flex {
@@ -123,4 +129,110 @@ footer.site-footer {
 	clear: both;
 	background-color: #000;
 	color: #fff;
+	padding: 20px 0;
+	overflow: hidden;
+	margin-top: 50px;
+
+	h3 {
+		text-transform: uppercase;
+		
+		font: {
+			size: 18px;
+			family: $font__main;
+		}
+	}
+
+	.col {
+		width: 100%;
+		float: left;
+		margin: 0 0 30px 0;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			margin: 0 3% 30px 0;
+		}
+	}
+
+	.item {
+		width: 100%;
+		margin: 0 0 20px 0;
+		float: left;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		margin: -5px -0px 0 3px;
+		@include transition(all ease .3s);
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+}
+section.blue-downloads {
+	background-color: $color-blue;
+	color: #fff;
+	padding: 2%;
+	overflow: hidden;
+
+	h2 {
+		width: 100%;
+		position: relative;
+
+		&:after {
+			width: 50%;
+			content: '';
+			border-bottom: 2px solid #fff;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+		}
+	}
+
+	.download-row {
+		width: 100%;
+		float: left;
+		margin: 0 0 10px 0;
+		
+	}
+	li {
+		padding: 0;
+		margin: 0 0 0 8px;
+		list-style-position: outside;
+		list-style-type: disc;
+	}
+	.download-col-1 {
+		width: 60%;
+		float: left;
+	}
+	.download-col-2 {
+		width: 20%;
+		float: left;
+	}
+	.download {
+		width: 30px;
+		height: 30px;
+		margin: 20px auto 0 auto;
+		text-align: center;
+		@include transition(all ease .3s);
+
+		a {
+			display: block;
+			color: #fff;
+			// width: 25px;
+			// height: 25px;
+			@include transition(all ease .3s);
+			&:hover {
+				color: $color-red;
+				i {
+					font-size: 2vw;
+				}
+			}
+		}
+		i {
+			font-size: 1.8vw;
+		}
+	}
+	
 }

@@ -28,7 +28,7 @@ function loginpage_custom_link() {
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
-
+add_image_size('banner', 1200, 400, array('center', 'center'));
 
 /*-------------------------------------
 	Adds Options page for ACF.

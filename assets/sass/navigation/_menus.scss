@@ -3,7 +3,15 @@
 	display: block;
 	float: left;
 	width: 100%;
+	text-align: center;
 	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+		float: right;
+		clear: none;
+		margin: 10px 0 0 0;
+		text-align: center;
+	}
+	@media screen and (min-width: $midwidth) {
 		width: auto;
 		float: right;
 		clear: none;
@@ -55,15 +63,25 @@
 		}
 	}
 	li {
-		float: left;
+		display: inline-block;
 		position: relative;
+		width: 100%;
 		font: {
 			family: $font__main;
 			size: 16px;
 		}
 		text-transform: uppercase;
-		@media screen and (min-width: $tabwidth) {
 
+		@media screen and (min-width: $tabwidth) {
+			font-size: 14px;
+			width: auto;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 14px;
+			float: left;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 16px;
 		}
 
 		&:hover > a,
@@ -74,7 +92,11 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: #000;
+		color: #fff;
+		padding: 10px 15px;
+		@media screen and (min-width: $tabwidth) {
+			color: #000;
+		}
 		@include transition(all .3s ease);
 		@media screen and (min-width: $tabwidth) {
 			padding: 10px 15px;
@@ -92,9 +114,9 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	// background-color: $color-green;
+	background-color: rgba($color-blue,.8);
 	ul.sub-menu {
-		background-color: rgba(255,255,255,.1);
+		background-color: rgba($color-blue,.8);
 	}
 	
 }
@@ -111,7 +133,7 @@
 button.menu-toggle {
 	border: 0px;
 	text-shadow: none;
-	// background-color: $color-green;
+	background-color: rgba($color-blue, .8);
 	color: #fff;
 	box-shadow: none;
 	width: auto;
