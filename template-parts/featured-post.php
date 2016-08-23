@@ -14,7 +14,7 @@ $wp_query = new WP_Query();
 
 	?>
 
-	<article class="post">
+	<article class="post featured-post">
 		<header class="red">
 			
 			<h3><?php the_title(); ?></h3>

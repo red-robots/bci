@@ -12,6 +12,7 @@ div {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
+	overflow: hidden;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -124,6 +125,9 @@ header.site-header {
 	}
 
 }
+.featured-post {
+	margin: 50px auto;
+}
 footer.site-footer {
 	width: 100%;
 	clear: both;
@@ -131,7 +135,7 @@ footer.site-footer {
 	color: #fff;
 	padding: 20px 0;
 	overflow: hidden;
-	margin-top: 50px;
+	// margin-top: 50px;
 
 	h3 {
 		text-transform: uppercase;

@@ -24,8 +24,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 
-			// Pull in featured post
-			get_template_part('template-parts/featured-post');
+		
 
 
 			?>

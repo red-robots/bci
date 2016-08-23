@@ -1396,7 +1396,7 @@ html[xmlns] .flexslider .slides{display:block}
 .widget select{max-width:100%}
 div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .clear{clear:both}
-.wrapper{width:100%;margin:0 auto;padding:20px}
+.wrapper{width:100%;margin:0 auto;padding:20px;overflow:hidden}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
 }.content-area{width:100%;margin:0 auto;padding:20px}
@@ -1418,7 +1418,8 @@ header.site-header{background-color:#d4d7df;min-height:150px}
 .learnmore a{color:#00428b;display:inline-block;width:auto;padding:15px;text-decoration:none}
 .learnmore a:hover i{margin:-5px -0 0 8px}
 .learnmore i{width:20px;position:relative;float:right;margin:-5px -0 0 3px;-webkit-transition:all ease .3s;transition:all ease .3s}
-footer.site-footer{width:100%;clear:both;background-color:#000;color:#fff;padding:20px 0;overflow:hidden;margin-top:50px}
+.featured-post{margin:50px auto}
+footer.site-footer{width:100%;clear:both;background-color:#000;color:#fff;padding:20px 0;overflow:hidden}
 footer.site-footer h3{text-transform:uppercase;font-size:18px;font-family:Vinci-Sans-Regular}
 footer.site-footer .col{width:100%;float:left;margin:0 0 30px 0}
 @media screen and (min-width:600px){footer.site-footer .col{width:30%;margin:0 3% 30px 0}
@@ -1456,7 +1457,7 @@ section.home-banner img{width:100%}
 .blue-box .icon{width:60px;margin:0 auto 30px auto}
 .blue-box .icon img{width:100%}
 .blue-box h3{text-transform:uppercase;font-size:16px}
-article.post{width:100%;margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative}
+article.post{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative}
 article.post .link a,article.post .link{color:#fff;text-decoration:none;width:100%;height:100%;position:absolute;left:0;top:0}
 article.post .link a:hover header.red .learnmore i,article.post .link:hover header.red .learnmore i{margin:-5px -0 0 8px}
 article.post header.red{background-color:#e50006;color:#fff;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;width:100%;position:relative;padding:2%;text-align:left}
