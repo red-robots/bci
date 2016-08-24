@@ -41,6 +41,14 @@ if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
 if ( ! current_user_can( 'manage_options' ) ) {
     show_admin_bar( false );
 }
+
+ /*-------------------------------------
+  Move Yoast to the Bottom
+---------------------------------------*/
+function yoasttobottom() {
+  return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 /*-------------------------------------
   Custom WYSIWYG Styles
 

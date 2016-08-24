@@ -91,7 +91,8 @@ setup_postdata( $post );
 			</div><!-- wrapper -->
 		</section>
 
-		<section class=" sections post wrapper">
+		<section class=" sections post ">
+			<div class="wrapper">
 			<?php 
 				wp_reset_postdata();
 
@@ -139,6 +140,7 @@ setup_postdata( $post );
 				endif; // if post was picked
 
 			 ?>
+			 </div><!-- wrapper -->
 		</section>
 		
 

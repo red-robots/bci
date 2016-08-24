@@ -6,7 +6,28 @@
  */
 
 jQuery(document).ready(function ($) {
-	
+	/*
+
+	*/
+	$('.graph-titles').hover(function(){
+		var $graph_this = $(this);
+		$('.graph-hover').each(function(){
+			var $this = $(this);
+			if($this.attr('data-graph')!==undefined&&$graph_this.attr('data-graph')!==undefined
+				&&$this.attr('data-graph')==$graph_this.attr('data-graph')){
+				$this.css({"display":"block"});
+			}
+		});
+	},function(){
+		var $graph_this = $(this);
+		$('.graph-hover').each(function(){
+			var $this = $(this);
+			if($this.attr('data-graph')!==undefined&&$graph_this.attr('data-graph')!==undefined
+				&&$this.attr('data-graph')==$graph_this.attr('data-graph')){
+				$this.css({"display":""});
+			}
+		});
+	});
 	/*
 	*
 	*	Current Page Active
@@ -83,9 +104,9 @@ jQuery(document).ready(function ($) {
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	// $(function(){	
+	// 	$("html").niceScroll();
+	// });
 	
 	
 	/*
