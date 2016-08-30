@@ -1399,10 +1399,11 @@ div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .wrapper{width:100%;margin:0 auto;padding:20px;overflow:hidden}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
-}.content-area{width:100%;margin:0 auto;padding:20px}
+}#content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+.content-area{width:100%;margin:0 auto;padding:20px;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch}
 @media screen and (min-width:945px){.content-area{width:52%;float:left;margin:0 0 0 3%;padding:0}
 }@media screen and (min-width:1200px){}
-.widget-area{width:100%;margin:0 auto}
+.widget-area{width:100%;margin:0 auto;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch}
 @media screen and (min-width:945px){.widget-area{width:41%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
 header.site-header{background-color:#d4d7df;min-height:150px;border-top:4px solid #000}
@@ -1439,7 +1440,7 @@ footer.site-footer .item{width:100%;margin:0 0 20px 0;float:left}
 footer.site-footer a{color:#fff;text-decoration:none;margin:-5px -0 0 3px;-webkit-transition:all ease .3s;transition:all ease .3s}
 footer.site-footer a:hover{color:#e50006}
 .footer-bottom{width:100%;border-top:1px solid #333;clear:both;padding:20px 0 0 0}
-section.blue-downloads{background-color:#00428b;color:#fff;padding:5%;overflow:hidden}
+section.blue-downloads{background-color:#00428b;color:#fff;padding:5%;overflow:hidden;height:100%}
 section.blue-downloads h2{width:100%;position:relative}
 section.blue-downloads h2:after{width:50%;content:'';border-bottom:2px solid #fff;position:absolute;bottom:-5px;left:0}
 section.blue-downloads .download-row{width:100%;float:left;margin:0 0 10px 0}
@@ -1452,7 +1453,7 @@ section.blue-downloads .download a:hover{color:#e50006}
 section.blue-downloads .download a:hover i{font-size:2vw}
 section.blue-downloads .download i{font-size:1.8vw}
 .sticky{display:block}
-.hentry{margin:0 0 1.5em}
+.hentry{margin:0}
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}

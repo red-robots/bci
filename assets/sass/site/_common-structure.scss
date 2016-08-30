@@ -22,11 +22,15 @@ div {
 		padding: 0px;
 	}
 }
-
+#content {
+	display: flex;
+	justify-content: space-between;
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
+	align-items: stretch;
 	
 	@media screen and (min-width: $midwidth) {
 		width: 52%;
@@ -42,6 +46,7 @@ div {
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
+	align-items: stretch;
 	
 	@media screen and (min-width: $midwidth) {
 		width:41%;
@@ -242,6 +247,7 @@ section.blue-downloads {
 	color: #fff;
 	padding: 5%;
 	overflow: hidden;
+	height: 100%;
 
 	h2 {
 		width: 100%;
