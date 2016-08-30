@@ -28,6 +28,7 @@ get_header(); ?>
 			// Pull in featured post
 			get_template_part('template-parts/featured-post');
 
+			
 
 			?>
 
