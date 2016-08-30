@@ -31,6 +31,7 @@
 section.sections {
 	text-align: center;
 	padding: 30px 0;
+	font-size: 1.4em;
 	header.title {
 		width: 100%;
 		clear: both;
@@ -44,7 +45,7 @@ section.sections {
 		border-bottom: 3px solid $color-blue;
 	}
 	.desc {
-		width: 70%;
+		width: 60%;
 		margin: 10px auto;
 	}
 }
@@ -54,9 +55,24 @@ section.grey {
 }
 section.home-banner {
 	width: 100%;
+	position: relative;
 
 	& img {
 		width: 100%;
+	}
+
+	.welcome-text {
+		width: 90%;
+		position: absolute;
+		top: 45%;
+		color: #fff;
+		font: {
+			family:$font__headline;
+			size: 40px;
+		}
+		left: 5%;
+		text-align: center;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.71);
 	}
 }
 section.about {
@@ -107,6 +123,10 @@ article.post {
 
 	@media screen and (min-width: $tabwidth) {
 		display: flex;
+	}
+
+	.excerpt {
+		font-size: 16px;
 	}
 
 	& .link a, & .link {

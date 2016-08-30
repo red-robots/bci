@@ -36,18 +36,21 @@ $sitemap_link = get_field('sitemap_link', 'option');
 						if( $lab_phone ) echo 'Lab: ' . $lab_phone;
 					 ?>
 				</div><!-- item -->
-				<div class="item">
-					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?>. All Rights Reserved.
-				</div><!-- item -->
+				
 			</div><!-- col -->
 
 			<div class="col">
 				<h3>Subsidiary of</h3>
-				<?php if( have_rows('subsidiaries', 'option') ) : while( have_rows('subsidiaries', 'option') ) : the_row(); 
+				<?php 
+				
+				if( have_rows('subsidiaries', 'option') ) : while( have_rows('subsidiaries', 'option') ) : the_row(); 
 
+						
 						$logo = get_sub_field('subsidiary', 'option');
 						$link = get_sub_field('subsidiary_link', 'option');
 						$size = 'full';
+
+						
 				?>
 
 					<div class="item">
@@ -75,18 +78,37 @@ $sitemap_link = get_field('sitemap_link', 'option');
 					</div>
 
 			<?php endwhile; endif; ?>
-				<div class="item">
-					<?php echo '<a href="' . $sitemap_link . '">sitemap</a> | Site by <a target="_blank" href="http://bellaworksweb.com/">Bellaworks</a>'; ?>
-				</div><!-- item -->
+				
 			</div><!-- col -->
 			
 
 			</div><!-- .site-info -->
+
+			<div class="footer-bottom">
+				<div class="col">
+					<div class="item">
+					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?>. All Rights Reserved.
+				</div><!-- item -->
+				</div>
+				<div class="col">
+					<div class="item">
+						<a href="http://hubbard.com/">
+							<img src="<?php bloginfo('template_url'); ?>/images/hubbard.png">
+						</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="item">
+					<?php echo '<a href="' . $sitemap_link . '">sitemap</a> | Site by <a target="_blank" href="http://bellaworksweb.com/">Bellaworks</a>'; ?>
+				</div><!-- item -->
+				</div>
+			</div><!-- footer bottom -->
+
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
-
+<?php the_field('google_analytics', 'option'); ?>
 <?php wp_footer(); ?>
 
 </body>

@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="wrapper">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -25,6 +25,8 @@ get_header(); ?>
 			endwhile; // End of the loop.
 
 		
+			// Pull in featured post
+			get_template_part('template-parts/featured-post');
 
 
 			?>
@@ -35,12 +37,7 @@ get_header(); ?>
 <?php
 get_sidebar('emulsion-materials');
 ?>
-</div><!-- wrapper -->
-<div class="wrapper">
-	<?php
-	// Pull in featured post
-	get_template_part('template-parts/featured-post');
-	?>
-</div>
+
+
 <?php 
 get_footer();

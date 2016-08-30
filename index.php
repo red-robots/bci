@@ -36,6 +36,7 @@ setup_postdata( $post );
 
 		<section class="home-banner">
 			<?php echo wp_get_attachment_image( $image, $size ); ?>
+			<div class="welcome-text"><?php echo $welcome_text; ?></div>
 		</section>
 
 	<?php } ?>
@@ -48,11 +49,11 @@ setup_postdata( $post );
 		<section class=" sections about ">
 			<h2>About Us</h2>
 			<div class="desc">
-			<?php echo $about_text; ?>
+				<?php echo $about_text; ?>
 			</div><!-- desc -->
-			<div class="learnmore">
+			<div class="learnmore blue">
 				<a href="<?php echo $about_link; ?>">
-					learn more <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i>
+					learn more
 				</a>
 			</div>
 		</section>
@@ -110,15 +111,15 @@ setup_postdata( $post );
 					<article class="post">
 						<header class="red">
 							
-							<h3><?php the_title(); ?></h3>
+							<h3>Featured Project</h3>
 							<div class="type"><?php echo $postTitle; ?></div>
 							<div class="city"><?php echo $city; ?></div>
 							<div class="excerpt">
 								<?php echo $desc; ?>
 							</div><!-- excerpt -->
 
-							<div class="learnmore  lm-right">
-								Learn More <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i>
+							<div class="learnmore white lm-right">
+								<a href="<?php the_permalink(); ?>">Learn More</a>
 							</div>
 
 							

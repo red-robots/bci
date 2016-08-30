@@ -18,28 +18,44 @@ get_header();
 			$size = 'banner';
 		?>
 
-	<section class="home-banner">
-		<?php echo wp_get_attachment_image( $photo, $size ); ?>
-	</section>
+
 
 
 <div class="wrapper">
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
 		
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-
-				<div class="entry-content">
+			<article class="post featured-post">
+				<header class="red">
+					
+					<h3>Featured Project</h3>
 					<div class="type"><?php echo $postTitle; ?></div>
 					<div class="city"><?php echo $city; ?></div>
-					<?php echo $desc; ?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
+					<div class="excerpt">
+						<?php echo $desc; ?>
+					</div><!-- excerpt -->
+
+					<div class="learnmore white lm-right">
+						<a href="<?php the_permalink(); ?>">Learn More</a>
+					</div>
+
+					
+				</header>
+				<div class="photo">
+					<?php echo wp_get_attachment_image( $photo, $size ); ?>
+				</div><!-- photo -->
+
+				<div class="link"><a href="<?php the_permalink(); ?>"></a></div>
+
+			</article>
+
+
+			<nav class="nav-single">
+					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
+					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
+				</nav><!-- .nav-single -->
 
 
 		</main><!-- #main -->
@@ -48,7 +64,7 @@ get_header();
 <?php
 endwhile; // End of the loop.
 
-get_sidebar();
+// get_sidebar();
 ?>
 </div>
 <?php 

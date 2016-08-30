@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Emulsion Services
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -24,8 +24,11 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 
+		
+
 			// Pull in featured post
 			get_template_part('template-parts/featured-post');
+
 
 			?>
 
@@ -33,9 +36,11 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar('about');
+get_sidebar('emulsion-services');
 ?>
 
+
+	
 
 <?php 
 get_footer();

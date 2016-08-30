@@ -55,6 +55,7 @@ div {
 header.site-header {
 	background-color: $color-light-blue;
 	min-height: 150px;
+	border-top: 4px solid #000;
 }
 
 /* Logo */
@@ -74,8 +75,8 @@ header.site-header {
 		margin: 20px 0 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 350px;
-		height: 85px;
+		width: 300px;
+		height: 73px;
 	}
 }
 .logo a, h1.logo a {
@@ -89,8 +90,8 @@ header.site-header {
 		height: 68px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 350px;
-		height: 85px;
+		width: 300px;
+		height: 73px;
 	}
 }
 .flex {
@@ -101,17 +102,31 @@ header.site-header {
 	width: auto;
 	text-transform: uppercase;
 	font-size: 18px;
+	display: inline-block;
+    
+    background: {
+    	repeat: no-repeat;
+    	position: right 10px top 6px;
+    }
+  
+
+    &.white {
+    	background-image: url(images/white-arrow.png);
+    	a {color: #fff}
+    }
+    &.blue {
+    	background-image: url(images/blue-arrow.png);
+    	a {color: $color-blue;}
+    }
 	a {
-		color: $color-blue;
+		
 		display: inline-block;
 		width: auto;
-		padding: 15px;
+		padding: 5px 40px 10px 0px;
 		text-decoration: none;
 
 		&:hover {
-			i {
-				margin: -5px -0px 0 8px;
-			}
+			background-position: right 0px top 6px;
 		}
 
 	}
@@ -127,6 +142,46 @@ header.site-header {
 }
 .featured-post {
 	margin: 50px auto;
+}
+.nav-single {
+	margin: 0 0 30px 0;
+}
+.nav-next, .nav-previous {
+	width: auto;
+	display: inline-block;
+	font-size: 20px;
+    a {
+    	color: $color-blue;
+    	display: inline-block;
+    	width: auto;
+		padding: 5px 40px 10px 0px;
+		text-decoration: none;
+    
+	    background: {
+	    	repeat: no-repeat;
+	    }
+    }
+}
+.nav-next {
+	float: right;
+	a {
+		padding: 5px 40px 10px 0px;
+    	background: {
+    		position: right 10px top 6px;
+    		image: url(images/blue-arrow.png);
+    	}
+	}
+}
+.nav-previous {
+	float: left;
+	a {
+		padding: 5px 0px 10px 40px;
+    	background: {
+    		position: left 10px top 6px;
+    		image: url(images/blue-arrow-prev.png);
+    	}
+
+	}
 }
 footer.site-footer {
 	width: 100%;
@@ -156,7 +211,9 @@ footer.site-footer {
 			margin: 0 3% 30px 0;
 		}
 	}
-
+	.white-border {
+		border-top: 1px solid #fff;
+	}
 	.item {
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -174,10 +231,16 @@ footer.site-footer {
 		}
 	}
 }
+.footer-bottom {
+	width: 100%;
+	border-top: 1px solid #333;
+	clear: both;
+	padding: 20px 0 0 0;
+}
 section.blue-downloads {
 	background-color: $color-blue;
 	color: #fff;
-	padding: 2%;
+	padding: 5%;
 	overflow: hidden;
 
 	h2 {
