@@ -20,7 +20,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 
 			// Pull in featured post
-			get_template_part('template-parts/featured-post');
+			//get_template_part('template-parts/featured-post');
 
 			?>
 
@@ -66,7 +66,7 @@ $sidebar_text_link = get_field('sidebar_text_link');
 		<a href="<?php echo $sidebar_link_link; ?>"><?php echo $sidebar_text; ?></a>
 	</div>
 
-	
+
 	</section>
 </aside><!-- #secondary -->
 
