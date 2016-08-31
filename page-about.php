@@ -63,7 +63,7 @@ $sidebar_text_link = get_field('sidebar_text_link');
 
 
 	<div class="learnmore white">
-		<a href="<?php echo $sidebar_link_link; ?>"><?php echo $sidebar_text; ?></a>
+		<a href="<?php echo $sidebar_text_link; ?>"><?php echo $sidebar_text; ?></a>
 	</div>
 
 

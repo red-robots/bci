@@ -1399,7 +1399,7 @@ div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .wrapper{width:100%;margin:0 auto;padding:20px;overflow:hidden}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
-}#content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
+}#content-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .content-area{width:100%;margin:0 auto;padding:20px;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch}
 @media screen and (min-width:945px){.content-area{width:52%;float:left;margin:0 0 0 3%;padding:0}
 }@media screen and (min-width:1200px){}
@@ -1423,6 +1423,8 @@ header.site-header{background-color:#d4d7df;min-height:150px;border-top:4px soli
 .learnmore a{display:inline-block;width:auto;padding:5px 40px 10px 0;text-decoration:none}
 .learnmore a:hover{background-position:right 0 top 6px}
 .learnmore i{width:20px;position:relative;float:right;margin:-5px -0 0 3px;-webkit-transition:all ease .3s;transition:all ease .3s}
+.learnmoreblue{width:auto;text-transform:uppercase;font-size:18px;display:inline-block;background-repeat:no-repeat;background-position:right 10px top 6px;background-image:url(images/blue-arrow.png)}
+.learnmoreblue a{display:inline-block;width:auto;padding:5px 40px 10px 0;text-decoration:none;color:#00428b}
 .featured-post{margin:50px auto}
 .nav-single{margin:0 0 30px 0}
 .nav-next,.nav-previous{width:auto;display:inline-block;font-size:20px}
@@ -1474,12 +1476,12 @@ section.home-banner .welcome-text{width:90%;position:absolute;top:45%;color:#fff
 .blue-box h3{text-transform:uppercase;font-size:16px}
 article.post{width:100%;position:relative}
 @media screen and (min-width:600px){article.post{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-}article.post .excerpt{font-size:16px}
+}article.post .excerpt{font-size:16px;line-height:1.2}
 article.post .link a,article.post .link{color:#fff;text-decoration:none;width:100%;height:100%;position:absolute;left:0;top:0}
 article.post .link a:hover header.red .learnmore i,article.post .link:hover header.red .learnmore i{margin:-5px -0 0 8px}
 article.post header.red{background-color:#e50006;color:#fff;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;width:100%;position:relative;padding:2%;text-align:left}
 @media screen and (min-width:600px){article.post header.red{width:30%;padding:2%;float:left}
-}article.post header.red h3{width:100%;font-family:Vinci-Serif-Light;font-size:30px;font-weight:300}
+}article.post header.red h3{width:100%;line-height:1;font-family:Vinci-Serif-Light;font-size:30px;font-weight:300}
 article.post header.red .type{width:100%;font-family:Vinci-Serif-Regular;font-size:20px}
 article.post header.red .city{position:relative;width:100%;font-family:Vinci-Sans-Regular;font-size:14px;text-transform:uppercase}
 article.post header.red .city::after{width:50%;content:'';border-bottom:1px solid #fff;position:absolute;bottom:-3px;left:0}
@@ -1512,7 +1514,8 @@ article.post .lm-right{position:absolute;display:block;bottom:20px;right:20px}
 }.contact-map{width:100%;margin:0 0 20px 0}
 @media screen and (min-width:600px){.contact-map{width:80%;margin:20px auto}
 }@media screen and (min-width:945px){.contact-map{width:40%;float:right;margin:0 0 30px 0}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.area-small{width:80%;margin:0 auto}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

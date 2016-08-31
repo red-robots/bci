@@ -49,6 +49,14 @@ function yoasttobottom() {
   return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+/*-------------------------------------
+  Favicon.
+---------------------------------------*/
+function mytheme_favicon() { 
+ echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
+} 
+add_action('wp_head', 'mytheme_favicon');
 /*-------------------------------------
   Custom WYSIWYG Styles
 
@@ -57,11 +65,11 @@ add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
   Keep this commented out to keep from getting duplicate "Format" dropdowns
 
 ---------------------------------------*/
-// function acc_custom_styles($buttons) {
-//   array_unshift($buttons, 'styleselect');
-//   return $buttons;
-// }
-// add_filter('mce_buttons_2', 'acc_custom_styles');
+function acc_custom_styles($buttons) {
+  array_unshift($buttons, 'styleselect');
+  return $buttons;
+}
+add_filter('mce_buttons_2', 'acc_custom_styles');
 
 
 /*
@@ -80,34 +88,33 @@ function my_mce_before_init_insert_formats( $init_array ) {
     // Each array child is a format with it's own settings
     
     // A block element
-    array(  
-      'title' => 'Block Color',  
-      'block' => 'span',  
-      'classes' => 'custom-color-block',
-      'wrapper' => true,
-      
-    ),
+    // array(  
+    //   'title' => 'Block Color',  
+    //   'block' => 'span',  
+    //   'classes' => 'custom-color-block',
+    //   'wrapper' => true,
+    // ),
     // inline color
     array(  
-      'title' => 'Custom Color',  
+      'title' => 'Learn More Link',  
       'inline' => 'span',  
-      'classes' => 'custom-color',
+      'classes' => 'learnmoreblue',
       'wrapper' => true,
       
     ),
-     array(
-        'title' => 'Header 2',
-        'format' => 'h2',
-        //'icon' => 'bold'
-    ),
-    array(
-        'title' => 'Header 3',
-        'format' => 'h3'
-    ),
-    array(
-        'title' => 'Paragraph',
-        'format' => 'p'
-    )
+    //  array(
+    //     'title' => 'Header 2',
+    //     'format' => 'h2',
+    //     //'icon' => 'bold'
+    // ),
+    // array(
+    //     'title' => 'Header 3',
+    //     'format' => 'h3'
+    // ),
+    // array(
+    //     'title' => 'Paragraph',
+    //     'format' => 'p'
+    // )
   );  
   // Insert the array, JSON ENCODED, into 'style_formats'
   $init_array['style_formats'] = json_encode( $style_formats );  
@@ -125,33 +132,50 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/
-function change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'News';
-    $submenu['edit.php'][5][0] = 'News';
-    $submenu['edit.php'][10][0] = 'Add News Item';
-    //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
-    //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
-    echo '';
-}
+// function change_post_menu_label() {
+//     global $menu;
+//     global $submenu;
+//     $menu[5][0] = 'News';
+//     $submenu['edit.php'][5][0] = 'News';
+//     $submenu['edit.php'][10][0] = 'Add News Item';
+//     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
+//     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
+//     echo '';
+// }
 
-function change_post_object_label() {
-        global $wp_post_types;
-        $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'News';
-        $labels->singular_name = 'News Item';
-        $labels->add_new = 'Add News Item';
-        $labels->add_new_item = 'Add News Item';
-        $labels->edit_item = 'Edit News Item';
-        $labels->new_item = 'News Item';
-        $labels->view_item = 'View News Item';
-        $labels->search_items = 'Search News';
-        $labels->not_found = 'No News found';
-        $labels->not_found_in_trash = 'No News found in Trash';
-    }
-add_action( 'init', 'change_post_object_label' );
-add_action( 'admin_menu', 'change_post_menu_label' );
+// function change_post_object_label() {
+//         global $wp_post_types;
+//         $labels = &$wp_post_types['post']->labels;
+//         $labels->name = 'News';
+//         $labels->singular_name = 'News Item';
+//         $labels->add_new = 'Add News Item';
+//         $labels->add_new_item = 'Add News Item';
+//         $labels->edit_item = 'Edit News Item';
+//         $labels->new_item = 'News Item';
+//         $labels->view_item = 'View News Item';
+//         $labels->search_items = 'Search News';
+//         $labels->not_found = 'No News found';
+//         $labels->not_found_in_trash = 'No News found in Trash';
+//     }
+// add_action( 'init', 'change_post_object_label' );
+// add_action( 'admin_menu', 'change_post_menu_label' );
+
+function remove_menus(){
+  
+  // remove_menu_page( 'index.php' );                  //Dashboard
+  // remove_menu_page( 'jetpack' );                    //Jetpack* 
+  remove_menu_page( 'edit.php' );                   //Posts
+  // remove_menu_page( 'upload.php' );                 //Media
+  // remove_menu_page( 'edit.php?post_type=page' );    //Pages
+  remove_menu_page( 'edit-comments.php' );          //Comments
+  // remove_menu_page( 'themes.php' );                 //Appearance
+  // remove_menu_page( 'plugins.php' );                //Plugins
+  // remove_menu_page( 'users.php' );                  //Users
+  // remove_menu_page( 'tools.php' );                  //Tools
+  // remove_menu_page( 'options-general.php' );        //Settings
+  
+}
+add_action( 'admin_menu', 'remove_menus' );
 
 /*-------------------------------------
   Add a last and first menu class option

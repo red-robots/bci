@@ -43,5 +43,10 @@
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+<?php if( is_front_page() ) {
+		$theClass = 'conent';
+	} else {
+		$theClass = 'content-flex';
+	}
+		?>
+	<div id="<?php echo $theClass; ?>" class="site-content">

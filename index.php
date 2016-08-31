@@ -94,6 +94,7 @@ setup_postdata( $post );
 
 		<section class=" sections post ">
 			<div class="wrapper">
+			<div class="area-small">
 			<?php 
 				wp_reset_postdata();
 
@@ -107,7 +108,7 @@ setup_postdata( $post );
 					$desc = get_field('description');
 
 					?>
-
+					
 					<article class="post">
 						<header class="red">
 							
@@ -131,7 +132,7 @@ setup_postdata( $post );
 						<div class="link"><a href="<?php the_permalink(); ?>"></a></div>
 						
 					</article>
-
+					
 				<?php 
 				wp_reset_postdata();
 				else : 
@@ -141,6 +142,7 @@ setup_postdata( $post );
 				endif; // if post was picked
 
 			 ?>
+			 </div><!-- area small -->
 			 </div><!-- wrapper -->
 		</section>
 		

@@ -22,7 +22,7 @@ div {
 		padding: 0px;
 	}
 }
-#content {
+#content-flex {
 	display: flex;
 	justify-content: space-between;
 }
@@ -144,6 +144,24 @@ header.site-header {
 		@include transition(all ease .3s);
 	}
 
+}
+// For Wysiwig
+.learnmoreblue {
+	width: auto;
+	text-transform: uppercase;
+	font-size: 18px;
+	display: inline-block;
+	background-repeat: no-repeat;
+    background-position: right 10px top 6px;
+    background-image: url(images/blue-arrow.png);
+    
+}
+.learnmoreblue a {
+	display: inline-block;
+	width: auto;
+	padding: 5px 40px 10px 0px;
+	text-decoration: none;
+    color: $color-blue;;
 }
 .featured-post {
 	margin: 50px auto;

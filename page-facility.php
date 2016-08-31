@@ -61,6 +61,37 @@ $sidebar_link = get_field('sidebar_link');
 $image = get_field('sidebar_image');
 $size = 'full';
 
+if(have_rows('section')) : while(have_rows('section')) : the_row(); 
+				$title = get_sub_field('title');
+				$description = get_sub_field('description');
+				$file = get_sub_field('file');
+				?>
+				
+
+			
+
+		
+					<div class="download-row">
+						
+							<?php 
+								echo '<li>';
+								echo $title; 
+								echo '<br>';
+								echo $description;
+								echo '<br>';
+								echo '<a href="' . $file . '">Download (PDF)</a>';
+								echo '</li>';
+							?>
+					
+
+						
+					</div><!-- download row -->
+		<?php 
+	
+		endwhile; endif; ?>
+
+
+<?php 
 echo wp_get_attachment_image( $image, $size ); ?>
 
 <div class="learnmore white">
