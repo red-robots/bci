@@ -90,9 +90,9 @@ if(have_rows('section')) : while(have_rows('section')) : the_row();
 	
 		endwhile; endif; ?>
 
-
-<?php 
-echo wp_get_attachment_image( $image, $size ); ?>
+		<div class="blue-photo">
+			<?php  echo wp_get_attachment_image( $image, $size ); ?>
+		</div>
 
 <div class="learnmore white">
 	<a href="<?php echo $sidebar_link; ?>"><?php echo $sidebar_text_link; ?></a>
