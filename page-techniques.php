@@ -126,9 +126,17 @@ $recyclflex = get_field('recyclflex');
 	</div><!-- graph-cont -->
 </section>
 
-<div class="wrapper">
-	<?php get_template_part('template-parts/featured-post'); ?>
+
+	
 </div><!-- wrapper -->
+
+<section class=" sections post ">
+	<div class="wrapper">
+		<div class="area-small">
+			<?php get_template_part('template-parts/featured-post'); ?>
+		</div>
+	</div>
+</section>
 
 <?php
 get_footer();

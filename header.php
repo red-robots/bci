@@ -43,7 +43,7 @@
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
-<?php if( is_front_page() ) {
+<?php if( is_front_page() || is_page(189) ) {
 		$theClass = 'conent';
 	} else {
 		$theClass = 'content-flex';
