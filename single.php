@@ -38,7 +38,7 @@ get_header();
 					</div><!-- excerpt -->
 
 					<div class="learnmore white lm-right">
-						<a href="<?php the_permalink(); ?>">Learn More</a>
+						<!-- <a href="<?php the_permalink(); ?>">Learn More</a> -->
 					</div>
 
 					
@@ -47,7 +47,7 @@ get_header();
 					<?php echo wp_get_attachment_image( $photo, $size ); ?>
 				</div><!-- photo -->
 
-				<div class="link"><a href="<?php the_permalink(); ?>"></a></div>
+				<!-- <div class="link"><a href="<?php the_permalink(); ?>"></a></div> -->
 
 			</article>
 

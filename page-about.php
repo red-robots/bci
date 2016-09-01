@@ -59,7 +59,9 @@ $sidebar_text_link = get_field('sidebar_text_link');
 			endwhile; endif; // sub repeater
 		endwhile; endif; ?>
 
-		<?php echo wp_get_attachment_image( $image, $size ); ?>
+		<div class="blue-photo">
+			<?php echo wp_get_attachment_image( $image, $size ); ?>
+		</div>
 
 
 	<div class="learnmore white">
