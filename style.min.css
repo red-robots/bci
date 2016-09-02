@@ -1500,8 +1500,8 @@ article.post .lm-right{position:absolute;display:block;bottom:0;right:20px}
 @media screen and (min-width:600px){.graph-titles{margin:0;width:auto;position:absolute}
 }.graph-titles:hover{background-color:#fff}
 .graph-hover{width:40%;color:#00428b}
-@media screen and (min-width:600px){.graph-hover{position:absolute;top:0;right:0;display:none;font-size:20px;font-weight:bold}
-}@media screen and (min-width:600px){.graph-hover{font-size:30px}
+@media screen and (min-width:600px){.graph-hover{position:absolute;top:0;right:0;display:none;font-size:14px;font-weight:bold}
+}@media screen and (min-width:1200px){.graph-hover{font-size:24px}
 }@media screen and (min-width:600px){.fog-seal{top:-20px;left:3%}
 }@media screen and (min-width:600px){.pavement-sealer{top:0;left:15%}
 }@media screen and (min-width:600px){.chip-seal{top:10%;left:28%}
