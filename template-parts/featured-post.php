@@ -1,8 +1,14 @@
 <?php 
+if( is_page(24)) { // emulsion materials
+	$numPosts = 2;
+} else {
+	$numPosts = 1;
+}
+
 $wp_query = new WP_Query();
 	$wp_query->query(array(
 	'post_type'=>'project',
-	'posts_per_page' => 1,
+	'posts_per_page' => $numPosts,
 	'order' => 'rand'
 	));
 	if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();

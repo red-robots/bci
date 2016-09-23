@@ -237,12 +237,42 @@ footer.site-footer {
 	.white-border {
 		border-top: 1px solid #fff;
 	}
+	.social {
+		width: 27px;
+		height: 27px;
+		float: left;
+		margin: 0 5px 0 0;
+		a {
+			display: block;
+			text-indent: -90000px;
+			margin: 0;
+			background: {
+				image: url(images/linkedin.png);
+				repeat: no-repeat;
+
+			}
+		}
+	}
 	.item {
 		width: 100%;
 		margin: 0 0 20px 0;
 		float: left;
 	}
-
+	section.connections {
+		width: 100%;
+		clear: both;
+		float: left;
+		margin: 20px 0 ;
+	}
+	.conn-item {
+		width: 20%;
+		margin: 0 5% 20px 0;
+		float: left;
+		display: inline-block;
+		img {
+			width: 100%;
+		}
+	}
 	a {
 		color: #fff;
 		text-decoration: none;

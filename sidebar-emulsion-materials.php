@@ -22,7 +22,7 @@
 					<?php echo '<h2>' . $section_title . '</h2>'; ?>
 				</div><!-- download col 1 -->
 
-				<div class="download-col-2">Saftey Data Sheets</div>
+				<div class="download-col-2">Safety Data Sheets</div>
 				<div class="download-col-2">Technical Sheets</div>
 
 		<?php	// Sub Repeater

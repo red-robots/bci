@@ -116,7 +116,7 @@ $recyclflex = get_field('recyclflex');
 
 <!-- Hovers -->
 		<div class="recyclflex graph-titles  wow zoomIn" data-wow-duration=".5s" data-graph="recyclflex">
-			recyclflex
+			recyflex
 		</div>
 		<div class="recyclflex-hover graph-hover" data-graph="recyclflex">
 			<?php echo $recyclflex; ?>

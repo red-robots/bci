@@ -46,17 +46,17 @@ setup_postdata( $post );
 		<main id="main" class="site-main" role="main">
 
 
-		<section class=" sections about ">
+		<!-- <section class=" sections about ">
 			<h2>About Us</h2>
 			<div class="desc">
-				<?php echo $about_text; ?>
-			</div><!-- desc -->
+				<?php //echo $about_text; ?>
+			</div>
 			<div class="learnmore blue">
-				<a href="<?php echo $about_link; ?>">
+				<a href="<?php //echo $about_link; ?>">
 					learn more
 				</a>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="sections grey values">
 			<div class="wrapper">
@@ -116,7 +116,7 @@ setup_postdata( $post );
 							<div class="type"><?php echo $postTitle; ?></div>
 							<div class="city"><?php echo $city; ?></div>
 							<div class="excerpt">
-								<?php echo $desc; ?>
+								<?php echo custom_field_excerpt(); ?>
 							</div><!-- excerpt -->
 
 							<div class="learnmore white lm-right">

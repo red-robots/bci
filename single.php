@@ -16,6 +16,8 @@ get_header();
 			$photo = get_field('photo');
 			$desc = get_field('description');
 			$size = 'banner';
+
+		endwhile; // End of the loop.
 		?>
 
 
@@ -28,11 +30,12 @@ get_header();
 		
 
 			<article class="post featured-post">
-				<header class="red">
+				
+				<header class="red-single">
 					
-					<h3>Featured Project</h3>
-					<div class="type"><?php echo $postTitle; ?></div>
-					<div class="city"><?php echo $city; ?></div>
+					<h3><?php echo $postTitle; ?></h3>
+					<div class="type"></div>
+					<!-- <div class="city"><?php //echo $city; ?></div> -->
 					<div class="excerpt">
 						<?php echo $desc; ?>
 					</div><!-- excerpt -->
@@ -43,26 +46,52 @@ get_header();
 
 					
 				</header>
-				<div class="photo">
-					<?php echo wp_get_attachment_image( $photo, $size ); ?>
-				</div><!-- photo -->
+				
 
 				<!-- <div class="link"><a href="<?php the_permalink(); ?>"></a></div> -->
 
+				<?php if( have_rows('gallery') ) : ?>
+					<section class="photo-gallery">
+						<div class="flexslider">
+							<ul class="slides">
+							<?php while( have_rows('gallery') ) : the_row();
+
+								$image = get_sub_field('image');
+								$location = get_sub_field('location');
+								$size = 'large';
+
+							?>
+								<li>
+									<div class="gallery-image">
+										<div class="location">
+										<?php echo $location; ?>
+										</div>
+										<?php echo wp_get_attachment_image( $image, $size ); ?>
+									</div>
+								</li>
+								
+							<?php endwhile; ?>
+							</ul>
+						</div><!-- flexslider -->
+					</section><!-- photo gallery -->
+				<?php endif; ?>
+
 			</article>
+
+
 
 
 			<nav class="nav-single">
 					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
 					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
-				</nav><!-- .nav-single -->
+				</nav> <!-- .nav-single  -->
 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-endwhile; // End of the loop.
+
 
 // get_sidebar();
 ?>

@@ -1438,7 +1438,12 @@ footer.site-footer h3{text-transform:uppercase;font-size:18px;font-family:Vinci-
 footer.site-footer .col{width:100%;float:left;margin:0 0 30px 0}
 @media screen and (min-width:600px){footer.site-footer .col{width:30%;margin:0 3% 30px 0}
 }footer.site-footer .white-border{border-top:1px solid #fff}
+footer.site-footer .social{width:27px;height:27px;float:left;margin:0 5px 0 0}
+footer.site-footer .social a{display:block;text-indent:-90000px;margin:0;background-image:url(images/linkedin.png);background-repeat:no-repeat}
 footer.site-footer .item{width:100%;margin:0 0 20px 0;float:left}
+footer.site-footer section.connections{width:100%;clear:both;float:left;margin:20px 0}
+footer.site-footer .conn-item{width:20%;margin:0 5% 20px 0;float:left;display:inline-block}
+footer.site-footer .conn-item img{width:100%}
 footer.site-footer a{color:#fff;text-decoration:none;margin:-5px -0 0 3px;-webkit-transition:all ease .3s;transition:all ease .3s}
 footer.site-footer a:hover{color:#e50006}
 .footer-bottom{width:100%;border-top:1px solid #333;clear:both;padding:20px 0 0 0}
@@ -1481,15 +1486,23 @@ article.post{width:100%;position:relative}
 }article.post .excerpt{font-size:16px;line-height:1.2}
 article.post .link a,article.post .link{color:#fff;text-decoration:none;width:100%;height:100%;position:absolute;left:0;top:0}
 article.post .link a:hover header.red .learnmore i,article.post .link:hover header.red .learnmore i{margin:-5px -0 0 8px}
-article.post header.red{background-color:#e50006;color:#fff;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;width:100%;position:relative;padding:2%;text-align:left}
-@media screen and (min-width:600px){article.post header.red{width:50%;padding:2%;float:left}
-}article.post header.red h3{width:100%;line-height:1;font-family:Vinci-Serif-Light;font-size:30px;font-weight:300}
-article.post header.red .type{width:100%;font-family:Vinci-Serif-Regular;font-size:20px}
-article.post header.red .city{position:relative;width:100%;font-family:Vinci-Sans-Regular;font-size:14px;text-transform:uppercase}
-article.post header.red .city::after{width:50%;content:'';border-bottom:1px solid #fff;position:absolute;bottom:-3px;left:0}
+article.post header.red{width:100%}
+@media screen and (min-width:600px){article.post header.red{width:50%}
+}article.post header.red-single{width:100%}
+@media screen and (min-width:600px){article.post header.red-single{width:30%}
+}article.post header.red,article.post header.red-single{background-color:#e50006;color:#fff;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;position:relative;padding:2%;text-align:left}
+@media screen and (min-width:600px){article.post header.red,article.post header.red-single{padding:2%;float:left}
+}article.post header.red h3,article.post header.red-single h3{width:100%;line-height:1;font-family:Vinci-Serif-Light;font-size:30px;font-weight:300}
+article.post header.red .type,article.post header.red-single .type{width:100%;font-family:Vinci-Serif-Regular;font-size:20px}
+article.post header.red .city,article.post header.red-single .city{position:relative;width:100%;font-family:Vinci-Sans-Regular;font-size:14px;text-transform:uppercase}
+article.post header.red .city::after,article.post header.red-single .city::after{width:50%;content:'';border-bottom:1px solid #fff;position:absolute;bottom:-3px;left:0}
 article.post .photo{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch;padding:0;overflow:hidden;width:100%;float:left}
 article.post .photo img{width:100%;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 article.post .lm-right{position:absolute;display:block;bottom:0;right:20px}
+section.photo-gallery{width:100%}
+@media screen and (min-width:600px){section.photo-gallery{width:66%;float:right}
+}section.photo-gallery .gallery-image{width:85%;margin:0 auto;position:relative}
+section.photo-gallery .gallery-image .location{width:auto;background-color:rgba(255,255,255,0.7);color:#000;padding:10px;position:absolute;top:10px;right:10px;display:inline-block}
 .grey-wrap{padding:3%}
 .grey-wrap h2{color:#00428b;width:100%;text-align:center;margin:0 0 40px 0;font-size:23px}
 .graph-cont{width:100%;position:relative}

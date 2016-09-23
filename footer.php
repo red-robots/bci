@@ -64,20 +64,35 @@ $sitemap_link = get_field('sitemap_link', 'option');
 
 			<div class="col">
 				<h3>Connect with us</h3>
-				<?php if( have_rows('connections', 'option') ) : while( have_rows('connections', 'option') ) : the_row(); 
+				<?php 
+				$linkedin_link = get_field('linkedin_link','option');
+
+				if( $linkedin_link ) {
+					echo '<div class="social"><a href="'. $linkedin_link . '">Linked In</a></div>';
+				}
+
+				if( have_rows('connections', 'option') ) : 
+
+					echo '<section class="connections">';
+
+					while( have_rows('connections', 'option') ) : the_row(); 
 
 						$connect_logo = get_sub_field('connect_logo', 'option');
 						$connect_link = get_sub_field('connect_link', 'option');
 					
 				?>
 
-					<div class="item">
+					<div class="conn-item">
 						<?php if( $connect_link ) echo '<a target="_blank" href="' . $connect_link . '">';?>
 							<?php echo wp_get_attachment_image( $connect_logo, $size ); ?>
 						<?php if( $connect_link ) echo '</a>';?>
 					</div>
 
-			<?php endwhile; endif; ?>
+			<?php endwhile; 
+
+			echo '</div>';
+
+			endif; ?>
 				
 			</div><!-- col -->
 			
