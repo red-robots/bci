@@ -23,8 +23,10 @@ div {
 	}
 }
 #content-flex {
-	display: flex;
-	justify-content: space-between;
+	@media screen and (min-width: $tabwidth) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 .content-area {
 	width: 100%;

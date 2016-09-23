@@ -68,11 +68,21 @@ section.home-banner {
 		color: #fff;
 		font: {
 			family:$font__headline;
-			size: 40px;
+			size: 20px;
 		}
 		left: 5%;
 		text-align: center;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.71);
+
+		@media screen and (min-width: $tabwidth) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 30px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 40px;
+		}
 	}
 }
 section.about {
@@ -123,10 +133,12 @@ section.post	{
 }
 article.post {
 	width: 100%;
-	
+	clear: both;
+	margin: 0 0 30px 0;
 	position: relative;
+	overflow: hidden;
 
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $deskwidth) {
 		display: flex;
 	}
 
@@ -156,7 +168,7 @@ article.post {
 	}
 	header.red {
 		width: 100%;
-		@media screen and (min-width: $tabwidth) {
+		@media screen and (min-width: $deskwidth) {
 			width: 50%;
 		}
 	}
@@ -400,7 +412,7 @@ section.photo-gallery {
 	}
 }
 .area-small {
-	width: 80%;
+	width: 97%;
 	margin: 0 auto;
 }
 // .customers {background-image: url(images/icon-customers.png;)}
