@@ -131,6 +131,11 @@ section.post	{
 	margin: 30px 0;
 	float: left;
 }
+.project-pusher {
+	width: 100%;
+	float: left;
+	margin: 50px 0 0 0;
+}
 article.post {
 	width: 100%;
 	clear: both;
@@ -318,7 +323,7 @@ section.photo-gallery {
 		background-color: #fff;
 	}
 }
-.graph-hover {
+.graph-up, .graph-hover {
 	width: 40%;
 	color: $color-blue;
 
@@ -326,12 +331,17 @@ section.photo-gallery {
 		position: absolute;
 		top: 0;
 		right: 0;
-		display: none;
 		font-size: 14px;
 		font-weight: bold;
 	}
 	@media screen and (min-width: $deskwidth) {
 		font-size: 24px;
+	}
+}
+.graph-hover {
+
+	@media screen and (min-width: $tabwidth) {
+		display: none;
 	}
 }
 .fog-seal {

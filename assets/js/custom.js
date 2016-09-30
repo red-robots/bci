@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
 
 	*/
 	$('.graph-titles').hover(function(){
+		$('.graph-up').css({'display': 'none'});
 		var $graph_this = $(this);
 		$('.graph-hover').each(function(){
 			var $this = $(this);

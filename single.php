@@ -26,7 +26,7 @@ get_header();
 <div class="wrapper">
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
-
+		<div class="project-pusher">
 		
 
 			<article class="post featured-post">
@@ -86,7 +86,7 @@ get_header();
 					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
 				</nav> <!-- .nav-single  -->
 
-
+				</div><!-- project pusher -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

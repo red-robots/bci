@@ -20,6 +20,7 @@ $thin_lift_hot_mix_overlay = get_field('thin_lift_hot_mix_overlay');
 $cape_seal = get_field('cape_seal');
 $full_depth_reclamation = get_field('full_depth_reclamation');
 $recyclflex = get_field('recyclflex');
+$directions = get_field('user_directions');
 
 ?>
 <div class="wrapper">
@@ -59,6 +60,16 @@ $recyclflex = get_field('recyclflex');
 		<div class="graph">
 			<img src="<?php bloginfo('template_url'); ?>/images/graph.png" />
 		</div><!-- graph -->
+
+
+<!-- 
+		First Block Visible to give the viewer
+		some directions, then hide on hover of another,
+
+ -->
+		<div class="fog-seal-hover graph-up" data-graph="fog-seal">
+			<?php echo $directions; ?>
+		</div>
 
 <!-- Visible tags -->
 		<div class="fog-seal graph-titles wow zoomIn" data-wow-duration=".5s" data-graph="fog-seal">
