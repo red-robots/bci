@@ -58,7 +58,7 @@ $directions = get_field('user_directions');
 
 	<div class="graph-cont">
 		<div class="graph">
-			<img src="<?php bloginfo('template_url'); ?>/images/graph.png" />
+			<img src="<?php bloginfo('template_url'); ?>/images/graph-new.png" />
 		</div><!-- graph -->
 
 
