@@ -5,7 +5,7 @@
 ( function() {
 	var nav = document.getElementById( 'site-navigation' ), button, menu;
 	if ( ! nav ) {
-		alert('akljfdajld');
+		
 		return;
 	}
 
